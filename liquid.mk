@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2013 The Android Open Source Project
+# Copyright 2015 The LiquidSmooth Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,5 +14,17 @@
 # limitations under the License.
 #
 
-add_lunch_combo aosp_d5303-userdebug
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1280
+TARGET_SCREEN_WIDTH := 720
 
+# Inherit some common Liquid stuff.
+$(call inherit-product, vendor/liquid/config/common_phone.mk)
+
+# Enhanced NFC
+$(call inherit-product, vendor/liquid/config/nfc_enhanced.mk)
+
+# Inherit device configuration
+$(call inherit-product, device/sony/tianchi/aosp_d5303.mk)
+
+PRODUCT_NAME := liquid_tianchi

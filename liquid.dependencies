@@ -1,0 +1,8 @@
+[
+  {
+    "remote": "lsd",
+    "repository": "android_device_sony_yukon",
+    "target_path": "device/sony/yukon",
+    "revision": "5.1"
+  },
+]
